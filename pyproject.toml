@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-html-solutions"
+version = "0.0.1"
+requires-python = ">=3.11"
+
+
+dependencies = [
+    "python-dotenv",
+    "beautifulsoup4",
+    "ttok",
+    "tiktoken",
+    "strip-tags @ git+https://github.com/benjamin-kirkbride/strip-tags.git",
+    "llm",
+    "pypandoc_binary",
+    "openai",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "black",
+    "coverage",
+    "pytest>=7.3",
+    "pytest-sugar",
+    "pytest-cov",
+    "mypy>=1.0.0",
+    "pudb",
+]
+
+[tool.ruff]
+line-length = 120
+select = [
+    "E",
+    "F",
+    "UP",
+    "N",
+    "S",
+    "C",
+    "B",
+    "T",
+]
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+
+[tool.setuptools]
+packages = ["compare"]
