@@ -1,0 +1,82 @@
+# where possible, provide a link that will not change,
+# such as a `&oldid` link for wikipedia, or an archive.org link
+# TODO: save copies of pages used for posterity and reproducibility - copyright concerns?
+
+# https://shareg.pt/hnDQ3g8
+
+# events that occured after the knowledge cutoff of 2021-10-01 that could be used:
+# - 2022 Winter Olympics
+# - 2022 World Expo in Dubai
+# - 2022 BAFTA Awards
+# - Movies that released post-cutoff
+# - The collapse of the cryptocurrency exchange FTX
+# - Elon Musk's acquisition of Twitter
+# - 2023 banking crisis
+
+# things to add:
+# News websites: Collect pages from reputable news sources covering a variety of topics such as sports, entertainment, technology, and science. Avoid politics.
+# Wikipedia: Include pages on different subjects, ranging from historical events and figures to scientific concepts or cultural phenomena.
+# Blogs: Explore blog platforms like WordPress or Medium, and select blogs that cover various interests such as travel, fashion, food, technology, or personal stories.
+# E-commerce websites: Include pages from popular e-commerce platforms like Amazon, eBay, or Etsy. Choose products from different categories like electronics, clothing, home decor, or books.
+# Educational websites: Consider including pages from educational institutions or online learning platforms like Coursera, Khan Academy, or academic journals.
+# Social media platforms: Collect pages from social media platforms like Twitter, Facebook, or Instagram. This can provide a mix of short-form content, user-generated posts, and multimedia elements.
+# Government websites: Include pages from government portals or agencies on topics such as laws and regulations, public services, or statistical data.
+# Forums and Q&A websites: Gather pages from forums like Reddit or Stack Exchange sites, where users discuss various subjects and seek answers to their questions.
+
+# name should be the top level heading, or <title>, whichever makes more sense
+# TODO: should that be automated?
+
+# List of web pages to compare
+[[webpages]]
+name = "Example"
+url = "https://example.com/"
+content_selector = "div"
+# skipped_columns = ["strip_tags-all-characters"]
+# skipped_criteria = ["markdown"]
+notes = """
+this page is certainly in the corpus of training data, but could be a decent control?
+"""
+
+[[webpages]]
+name = "2022 Winter Olympics"
+url = "https://en.wikipedia.org/w/index.php?title=Winter_Olympic_Games&oldid=1156417476"
+content_selectors = ["#content"]
+# skipped_columns = ["strip_tags-all-characters"]
+# skipped_criteria = ["markdown"]
+notes = """
+Newest version of the page trained on: https://en.wikipedia.org/w/index.php?title=2022_Winter_Olympics&oldid=1047361363
+"""
+
+# even basic scraping of reddit is not trivial, more research needed
+# [[webpages]]
+# name = "I don't know why I'm like this"
+# url = "https://www.reddit.com/r/MechanicalKeyboards/comments/10kwxl2/i_dont_know_why_im_like_this/"
+# content_selectors = [".content"]
+# # skipped_columns = ["strip_tags-all-characters"]
+# # skipped_criteria = ["markdown"]
+# notes = """
+# """
+
+[[webpages]]
+name = "Django, HTMX and Alpine.js: Modern websites, JavaScript optional"
+url = "https://news.ycombinator.com/item?id=29319034"
+content_selectors = [".fatitem", ".comment-tree"]
+# skipped_columns = ["strip_tags-all-characters"]
+# skipped_criteria = ["markdown"]
+notes = """
+"""
+
+[[webpages]]
+name = "Django, HTMX and Alpine.js: Modern websites, JavaScript optional"
+url = "https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/htmx-alpine/"
+content_selectors = [".content-card"]
+# skipped_columns = ["strip_tags-all-characters"]
+# skipped_criteria = ["markdown"]
+notes = """
+"""
+
+# Additional options for the comparison script
+# [options]
+# option1 = "value1"
+# option2 = "value2"
+# Add more options for the script below
