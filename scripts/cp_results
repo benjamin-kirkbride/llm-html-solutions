@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# move to project root
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd $script_dir
+cd ..
+
+test -f "results.csv" || (echo "\`results.csv\` not found" && exit 1)
+
+scp results.csv "$host":.
+ssh "$host" sudo cp -p results.csv /srv/csv/results.csv
+# update the timestamp
+ssh "$host" sudo touch /srv/csv/results.csv
