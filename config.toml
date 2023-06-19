@@ -30,7 +30,7 @@
 [[webpages]]
 name = "Example"
 url = "https://example.com/"
-content_selector = "div"
+content_selectors = ["div"]
 # skipped_columns = ["strip_tags-all-characters"]
 # skipped_criteria = ["markdown"]
 notes = """
