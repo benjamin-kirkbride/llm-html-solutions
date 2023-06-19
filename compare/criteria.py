@@ -1,36 +1,6 @@
 import itertools
 from typing import NamedTuple
 
-COLUMNS = [
-    "html-all-characters",
-    "html-all-words",
-    "html-all-tokens",
-    "html-body-characters",
-    "html-body-words",
-    "html-body-tokens",
-    "html-content-characters",
-    "html-content-words",
-    "html-content-tokens",
-    "strip_tags-all-characters",
-    "strip_tags-all-words",
-    "strip_tags-all-tokens",
-    "strip_tags-body-characters",
-    "strip_tags-body-words",
-    "strip_tags-body-tokens",
-    "strip_tags-content-characters",
-    "strip_tags-content-words",
-    "strip_tags-content-tokens",
-    "markdown-all-characters",
-    "markdown-all-words",
-    "markdown-all-tokens",
-    "markdown-body-characters",
-    "markdown-body-words",
-    "markdown-body-tokens",
-    "markdown-content-characters",
-    "markdown-content-words",
-    "markdown-content-tokens",
-]
-
 
 class Column(NamedTuple):
     column: str
